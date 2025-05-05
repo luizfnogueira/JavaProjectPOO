@@ -4,7 +4,7 @@ import br.edu.cesarschool.next.oo.persistenciaobjetos.CadastroObjetos;
 import br.edu.cs.poo.ac.seguro.entidades.SeguradoPessoa;
 
 public class SeguradoPessoaDAO extends DAOGenerico {
-
+	
     public SeguradoPessoaDAO() {
         cadastro = new CadastroObjetos(SeguradoPessoa.class);
     }
