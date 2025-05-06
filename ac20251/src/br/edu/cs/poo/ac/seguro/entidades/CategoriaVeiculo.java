@@ -12,34 +12,26 @@ public enum CategoriaVeiculo {
 	private int codigo;
 	private String nome;
 	private PrecoAno[] precosAnos;
-	
 	private CategoriaVeiculo(int codigo, String nome, PrecoAno[] precosAnos) {
 		this.codigo = codigo;
 		this.nome = nome;
 		this.precosAnos = precosAnos;
 	}
-	
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
-	}
-	
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	
-	public void setPrecosAnos(PrecoAno[] precosAnos) {
-		this.precosAnos = precosAnos;
-	}
-	
 	public int getCodigo() {
 		return codigo;
 	}
-	
 	public String getNome() {
 		return nome;
 	}
-	
 	public PrecoAno[] getPrecosAnos() {
 		return precosAnos;
 	}
+	public static CategoriaVeiculo buscarPorCodigo(int codigo) {
+        for (CategoriaVeiculo c : CategoriaVeiculo.values()) {
+            if (c.getCodigo() == codigo) {
+                return c;
+            }
+        }
+        return null;
+    }
 }
